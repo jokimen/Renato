@@ -1,0 +1,10 @@
+rules_version = '2';
+
+// Default-deny: no admin auth is wired up yet (that's Fase 3).
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
