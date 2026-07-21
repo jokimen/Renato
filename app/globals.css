@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  /* Light mode: cream background, charcoal ink, gold accent */
+  --background: #f5f1e8;
+  --foreground: #1a1a1a;
+  --surface: #ffffff;
+  --surface-muted: #ece6d8;
+  --border: #ddd3bd;
+}
+
+.dark {
+  /* Dark mode (default intent): charcoal background, cream text, gold accent */
+  --background: #0d0d0d;
+  --foreground: #f5f1e8;
+  --surface: #161616;
+  --surface-muted: #232323;
+  --border: #2c2c2c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+
+  /* Gold/brass accent — placeholder palette pending the client's real brand colors */
+  --color-gold-400: #d9b876;
+  --color-gold-500: #c9a35c;
+  --color-gold-600: #a8813f;
+
+  --font-sans: var(--font-sans-body);
+  --font-display: var(--font-display-heading);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: #0d0d0d;
+}
