@@ -64,9 +64,9 @@ export function Booking() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="border-border bg-surface relative min-h-[700px] overflow-hidden rounded-2xl border"
+        className="border-border bg-surface relative overflow-hidden rounded-2xl border"
       >
-        <div ref={containerRef} className="h-full min-h-[700px] w-full" />
+        <div ref={containerRef} className="min-h-[700px] w-full" />
         {!ready && (
           <div className="text-foreground/50 absolute inset-0 flex items-center justify-center text-sm">
             A carregar marcações…
