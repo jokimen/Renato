@@ -1,11 +1,18 @@
 interface IconProps {
   size?: number;
+  strokeWidth?: number;
   className?: string;
 }
 
 // lucide-react has no barber-chair or hair-clipper icon — hand-drawn to
-// match lucide's stroke style (24x24 viewBox, rounded strokes).
-export function BarberChairIcon({ size = 24, className }: IconProps) {
+// match lucide's stroke style (24x24 viewBox, rounded strokes). Default
+// strokeWidth of 0.6 matches the Scissors icon used alongside these in
+// the Hero, so all three read as one consistent set.
+export function BarberChairIcon({
+  size = 24,
+  strokeWidth = 0.6,
+  className,
+}: IconProps) {
   return (
     <svg
       width={size}
@@ -13,7 +20,7 @@ export function BarberChairIcon({ size = 24, className }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth={1.4}
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
@@ -33,7 +40,11 @@ export function BarberChairIcon({ size = 24, className }: IconProps) {
   );
 }
 
-export function ClipperIcon({ size = 24, className }: IconProps) {
+export function ClipperIcon({
+  size = 24,
+  strokeWidth = 0.6,
+  className,
+}: IconProps) {
   return (
     <svg
       width={size}
@@ -41,7 +52,7 @@ export function ClipperIcon({ size = 24, className }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth={1.4}
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}

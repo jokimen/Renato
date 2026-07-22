@@ -30,7 +30,15 @@ export function Hero() {
             className="text-gold-500 drop-shadow-[0_0_60px_rgba(201,163,92,0.35)]"
           />
         </motion.div>
+      </motion.div>
 
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.16 }}
+        transition={{ duration: 1.2 }}
+        className="pointer-events-none absolute top-1/2 -left-8 hidden h-[360px] w-[320px] -translate-y-1/2 lg:block"
+      >
         <motion.div
           animate={{ y: [0, 12, 0] }}
           transition={{
@@ -41,7 +49,7 @@ export function Hero() {
           }}
           className="absolute bottom-4 left-0"
         >
-          <BarberChairIcon size={130} className="text-gold-500/55" />
+          <BarberChairIcon size={220} className="text-gold-500" />
         </motion.div>
 
         <motion.div
@@ -53,9 +61,9 @@ export function Hero() {
             ease: "easeInOut",
             delay: 0.8,
           }}
-          className="absolute top-6 left-10"
+          className="absolute top-2 left-32"
         >
-          <ClipperIcon size={90} className="text-gold-500/50" />
+          <ClipperIcon size={150} className="text-gold-500" />
         </motion.div>
       </motion.div>
 
