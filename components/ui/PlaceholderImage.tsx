@@ -41,7 +41,7 @@ export function PlaceholderImage({
       fill
       sizes={sizes ?? "100vw"}
       priority={priority}
-      className={cn("object-cover", className)}
+      className={cn("object-cover object-center", className)}
     />
   );
 }

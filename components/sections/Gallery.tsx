@@ -44,7 +44,7 @@ export function Gallery() {
         ))}
       </div>
 
-      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
+      <div className="mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((image, index) => (
           <motion.button
             key={image.id}

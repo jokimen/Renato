@@ -9,7 +9,7 @@ export const siteContent: SiteContent = {
   address: "Rua D. Pedro V, Edifício Concorde, Loja 3, Trofa, Portugal",
   phone: "+351914346731",
   phoneDisplay: "914 346 731",
-  instagramHandle: "rjcabeleireiros",
+  instagramHandle: "r.j.cabeleireiros",
   facebookHandle: "R.J.Cabeleireiro",
   // TODO: replace with real opening hours from the client
   hours: "Seg–Sáb: 09h00–19h00",
