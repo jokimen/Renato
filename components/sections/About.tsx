@@ -32,7 +32,12 @@ export function About() {
           description="Na Rua D. Pedro V, em Trofa, cuidamos de cada corte com a mesma atenção — do primeiro à última cliente."
         />
 
-        <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <AnimatedCounter
+            value={siteContent.social.yearsExperience}
+            suffix="+"
+            label="Anos de experiência"
+          />
           <AnimatedCounter
             value={siteContent.social.followers}
             suffix="+"

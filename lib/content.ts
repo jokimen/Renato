@@ -72,7 +72,8 @@ export const siteContent: SiteContent = {
     {
       id: "placeholder-5",
       author: "João P.",
-      quote: "Melhor cabeleireiro da zona. Preços justos e trabalho de qualidade.",
+      quote:
+        "Melhor cabeleireiro da zona. Preços justos e trabalho de qualidade.",
       rating: 5,
     },
     {
@@ -123,5 +124,6 @@ export const siteContent: SiteContent = {
     followers: 529,
     recommendPercent: 100,
     reviewCount: 5,
+    yearsExperience: 25,
   },
 };

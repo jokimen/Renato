@@ -32,6 +32,7 @@ export interface SocialStats {
   followers: number;
   recommendPercent: number;
   reviewCount: number;
+  yearsExperience: number;
 }
 
 export interface SiteContent {
