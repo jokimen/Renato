@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Scissors } from "lucide-react";
+import Image from "next/image";
 import { siteContent } from "@/lib/content";
-import { BarberChairIcon, ClipperIcon } from "@/components/ui/BarberIcons";
 
 export function Hero() {
   return (
@@ -35,7 +35,7 @@ export function Hero() {
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.16 }}
+        animate={{ opacity: 0.45 }}
         transition={{ duration: 1.2 }}
         className="pointer-events-none absolute top-1/2 -left-8 hidden h-[360px] w-[320px] -translate-y-1/2 lg:block"
       >
@@ -49,7 +49,14 @@ export function Hero() {
           }}
           className="absolute bottom-4 left-0"
         >
-          <BarberChairIcon size={220} className="text-gold-500" />
+          <Image
+            src="/images/cadeira.png"
+            alt=""
+            width={200}
+            height={219}
+            priority
+            className="mix-blend-screen"
+          />
         </motion.div>
 
         <motion.div
@@ -63,7 +70,14 @@ export function Hero() {
           }}
           className="absolute top-2 left-32"
         >
-          <ClipperIcon size={150} className="text-gold-500" />
+          <Image
+            src="/images/maquina.png"
+            alt=""
+            width={130}
+            height={142}
+            priority
+            className="mix-blend-screen"
+          />
         </motion.div>
       </motion.div>
 
@@ -79,7 +93,14 @@ export function Hero() {
           strokeWidth={0.6}
           className="text-gold-500 -rotate-[15deg]"
         />
-        <BarberChairIcon size={90} className="text-gold-500" />
+        <Image
+          src="/images/cadeira.png"
+          alt=""
+          width={82}
+          height={90}
+          priority
+          className="mix-blend-screen"
+        />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,163,92,0.12),_transparent_60%)]" />
