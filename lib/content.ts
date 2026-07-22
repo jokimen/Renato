@@ -12,6 +12,7 @@ export const siteContent: SiteContent = {
   phoneDisplay: "914 346 731",
   instagramHandle: "r.j.cabeleireiros",
   facebookHandle: "R.J.Cabeleireiro",
+  calendlyUrl: "https://calendly.com/renatooliveira1804",
   // TODO: replace with real opening hours from the client
   hours: "Seg–Sáb: 09h00–19h00",
   services: [

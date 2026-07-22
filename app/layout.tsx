@@ -7,6 +7,8 @@ import { SmoothScrollProvider } from "@/components/ui/SmoothScrollProvider";
 import { LoadingScreen } from "@/components/ui/LoadingScreen";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { Navbar } from "@/components/ui/Navbar";
+import { FloatingBookButton } from "@/components/ui/FloatingBookButton";
+import { CalendlyLoader } from "@/components/ui/CalendlyLoader";
 import { Footer } from "@/components/sections/Footer";
 
 const inter = Inter({
@@ -37,7 +39,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${oswald.variable}`}
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://assets.calendly.com/assets/external/widget.css"
+        />
+      </head>
       <body className="min-h-full antialiased">
+        <CalendlyLoader />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -49,6 +58,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <FloatingBookButton />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

@@ -44,6 +44,7 @@ export interface SiteContent {
   phoneDisplay: string;
   instagramHandle: string;
   facebookHandle: string;
+  calendlyUrl: string;
   hours: string;
   services: Service[];
   team: TeamMember[];
