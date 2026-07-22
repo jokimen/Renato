@@ -29,7 +29,7 @@ export function About() {
         <SectionHeading
           eyebrow="Sobre nós"
           title="Tradição no cuidado do cabelo, olho de detalhe"
-          description="Na Rua D. Pedro V, em Trofa, cuidamos de cada corte com a mesma atenção — do primeiro à última cliente."
+          description="Na Rua D. Pedro V, em Trofa, cuidamos de cada corte com a mesma atenção, do primeiro ao última cliente."
         />
 
         <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
