@@ -8,6 +8,7 @@ import { LoadingScreen } from "@/components/ui/LoadingScreen";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { Navbar } from "@/components/ui/Navbar";
 import { FloatingBookButton } from "@/components/ui/FloatingBookButton";
+import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
 import { CalendlyLoader } from "@/components/ui/CalendlyLoader";
 import { Footer } from "@/components/sections/Footer";
 
@@ -59,6 +60,7 @@ export default function RootLayout({
             {children}
             <Footer />
             <FloatingBookButton />
+            <FloatingWhatsAppButton />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

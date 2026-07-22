@@ -28,7 +28,7 @@ export function About() {
       <div className="mx-auto max-w-4xl px-6">
         <SectionHeading
           eyebrow="Sobre nós"
-          title="Tradição no cuidado do cabelo, olho de detalhe"
+          title="Tradição no cuidado do cabelo, olho no detalhe"
           description="Na Rua D. Pedro V, em Trofa, cuidamos de cada corte com a mesma atenção, do primeiro ao última cliente."
         />
 
