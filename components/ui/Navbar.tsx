@@ -3,6 +3,7 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { useState } from "react";
 import { siteContent } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -41,8 +42,15 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-display text-lg tracking-wide">
-          {siteContent.businessName}
+        <a href="#top" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt={siteContent.businessName}
+            width={600}
+            height={226}
+            priority
+            className="h-9 w-auto drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]"
+          />
         </a>
 
         <ul className="hidden items-center gap-8 text-sm font-medium tracking-wide md:flex">
@@ -67,7 +75,11 @@ export function Navbar() {
             }
             className="hover:text-gold-500 hidden h-9 w-9 items-center justify-center rounded-full transition-colors md:flex"
           >
-            {mounted && resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            {mounted && resolvedTheme === "dark" ? (
+              <Sun size={18} />
+            ) : (
+              <Moon size={18} />
+            )}
           </button>
           <a
             href="#marcacoes"

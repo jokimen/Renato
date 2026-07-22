@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteContent } from "@/lib/content";
 
 // lucide-react dropped brand/logo icons — small inline marks instead.
@@ -38,7 +39,13 @@ export function Footer() {
     <footer className="border-border border-t">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="font-display text-lg">{siteContent.businessName}</p>
+          <Image
+            src="/images/logo.png"
+            alt={siteContent.businessName}
+            width={600}
+            height={226}
+            className="mb-3 h-11 w-auto"
+          />
           <p className="text-foreground/60 mt-1 text-sm">
             {siteContent.address}
           </p>

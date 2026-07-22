@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { siteContent } from "@/lib/content";
 
@@ -31,14 +32,20 @@ export function LoadingScreen() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="bg-background fixed inset-0 z-[100] flex items-center justify-center"
         >
-          <motion.span
-            initial={{ opacity: 0, letterSpacing: "0.1em" }}
-            animate={{ opacity: 1, letterSpacing: "0.3em" }}
-            transition={{ duration: 0.8 }}
-            className="text-gold-500 font-display text-xl uppercase"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {siteContent.businessName}
-          </motion.span>
+            <Image
+              src="/images/logo.png"
+              alt={siteContent.businessName}
+              width={600}
+              height={226}
+              priority
+              className="h-16 w-auto"
+            />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
