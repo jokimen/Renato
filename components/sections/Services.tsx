@@ -2,9 +2,39 @@
 
 import { motion } from "framer-motion";
 import { Scissors } from "lucide-react";
+import Image from "next/image";
 import { siteContent } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TiltCard } from "@/components/ui/TiltCard";
+import type { Service } from "@/lib/types";
+
+function ServiceIcon({ service }: { service: Service }) {
+  if (service.name.includes("lâmina")) {
+    return (
+      <Image
+        src="/images/lamina.png"
+        alt=""
+        width={32}
+        height={35}
+        priority
+        className="mb-4 mix-blend-screen"
+      />
+    );
+  }
+  if (service.name.includes("máquina")) {
+    return (
+      <Image
+        src="/images/maquina.png"
+        alt=""
+        width={32}
+        height={35}
+        priority
+        className="mb-4 mix-blend-screen"
+      />
+    );
+  }
+  return <Scissors className="text-gold-500 mb-4" size={22} />;
+}
 
 export function Services() {
   return (
@@ -26,7 +56,7 @@ export function Services() {
           >
             <TiltCard className="flex h-full flex-col justify-between p-6">
               <div>
-                <Scissors className="text-gold-500 mb-4" size={22} />
+                <ServiceIcon service={service} />
                 <h3 className="font-display text-lg">{service.name}</h3>
                 {service.priceLabel && (
                   <p className="text-foreground/50 mt-1 text-sm">

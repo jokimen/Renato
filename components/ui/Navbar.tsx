@@ -41,7 +41,7 @@ export function Navbar() {
           : "bg-transparent",
       )}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <a href="#top" className="flex items-center">
           <Image
             src="/images/logo.png"
@@ -49,7 +49,7 @@ export function Navbar() {
             width={600}
             height={226}
             priority
-            className="h-9 w-auto drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]"
+            className="h-16 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]"
           />
         </a>
 
