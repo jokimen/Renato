@@ -2,14 +2,21 @@
 
 import { motion } from "framer-motion";
 import { CalendarCheck } from "lucide-react";
-import { getCalendlyEmbedUrl } from "@/lib/calendly";
+import { CALENDLY_READY, getCalendlyEmbedUrl } from "@/lib/calendly";
 
 // Persistent booking CTA (plan: "Botão flutuante 'Marcar' sempre
-// visível") — opens Calendly's popup widget instantly from anywhere
-// on the page, regardless of scroll position.
+// visível"). Opens Calendly's popup widget once the account is ready;
+// until then, scrolls to the Marcações preview instead of popping up
+// Calendly's "No openings at the moment" for every visitor.
 export function FloatingBookButton() {
   function openBooking() {
-    window.Calendly?.initPopupWidget({ url: getCalendlyEmbedUrl() });
+    if (CALENDLY_READY) {
+      window.Calendly?.initPopupWidget({ url: getCalendlyEmbedUrl() });
+      return;
+    }
+    document
+      .getElementById("marcacoes")
+      ?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
