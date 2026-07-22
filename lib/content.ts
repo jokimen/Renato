@@ -13,23 +13,22 @@ export const siteContent: SiteContent = {
   instagramHandle: "r.j.cabeleireiros",
   facebookHandle: "R.J.Cabeleireiro",
   calendlyUrl: "https://calendly.com/renatooliveira1804",
-  // TODO: replace with real opening hours from the client
-  hours: "Seg–Sáb: 09h00–19h00",
+  hours: "Terça a Sexta: 09h00–19h30\nSábado: 08h30–19h00\nSegunda: Fechado",
   services: [
-    { id: "corte", name: "Corte de cabelo", price: 13 },
-    { id: "corte-maquina", name: "Corte à máquina", price: 11 },
+    { id: "corte", name: "Corte de cabelo", price: 14 },
+    { id: "corte-maquina", name: "Corte à máquina", price: 12 },
     {
       id: "corte-maquina-recorrente",
       name: "Corte à máquina",
       priceLabel: "15 em 15 dias",
-      price: 8,
+      price: 9,
     },
-    { id: "barba-maquina", name: "Barba à máquina", price: 1 },
+    { id: "barba-maquina", name: "Barba à máquina", price: 2 },
     {
       id: "barba-lamina",
       name: "Barba à lâmina",
       priceLabel: "só contornos",
-      price: 5,
+      price: 6,
     },
   ],
   // TODO: replace with real team members provided by the client

@@ -44,7 +44,7 @@ export function Contact() {
                   <p className="text-foreground/50 text-xs tracking-wide uppercase">
                     {label}
                   </p>
-                  <p className="mt-0.5">{value}</p>
+                  <p className="mt-0.5 whitespace-pre-line">{value}</p>
                 </div>
               </motion.div>
             ))}

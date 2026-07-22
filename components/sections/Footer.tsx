@@ -52,7 +52,9 @@ export function Footer() {
           <p className="text-foreground/60 text-sm">
             {siteContent.phoneDisplay}
           </p>
-          <p className="text-foreground/60 text-sm">{siteContent.hours}</p>
+          <p className="text-foreground/60 text-sm whitespace-pre-line">
+            {siteContent.hours}
+          </p>
         </div>
 
         <div className="flex items-center gap-4">
