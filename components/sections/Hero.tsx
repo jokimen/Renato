@@ -1,17 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
+import { Scissors } from "lucide-react";
 import { siteContent } from "@/lib/content";
-
-// ssr:false is only valid inside a Client Component in this Next.js version
-// — Scene uses react-three-fiber/WebGL which cannot run server-side.
-const Scene = dynamic(
-  () => import("@/components/3d/Scene").then((m) => m.Scene),
-  {
-    ssr: false,
-  },
-);
 
 export function Hero() {
   return (
@@ -19,7 +10,38 @@ export function Hero() {
       id="top"
       className="from-background via-background relative flex min-h-screen items-center overflow-hidden bg-gradient-to-b to-black/20"
     >
-      <Scene />
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0, scale: 0.85, rotate: -20 }}
+        animate={{ opacity: 0.9, scale: 1, rotate: -12 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="pointer-events-none absolute top-1/2 -right-16 hidden -translate-y-1/2 lg:block"
+      >
+        <motion.div
+          animate={{ rotate: [-12, -6, -12], y: [0, -14, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Scissors
+            size={420}
+            strokeWidth={0.6}
+            className="text-gold-500 drop-shadow-[0_0_60px_rgba(201,163,92,0.35)]"
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.18 }}
+        transition={{ duration: 1 }}
+        className="pointer-events-none absolute inset-0 flex items-center justify-center lg:hidden"
+      >
+        <Scissors
+          size={260}
+          strokeWidth={0.6}
+          className="text-gold-500 -rotate-[15deg]"
+        />
+      </motion.div>
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,163,92,0.12),_transparent_60%)]" />
 

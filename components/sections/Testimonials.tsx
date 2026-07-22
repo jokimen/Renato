@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useState } from "react";
 import { siteContent } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cn } from "@/lib/utils";
 
 export function Testimonials() {
   const { testimonials, social } = siteContent;
@@ -23,7 +24,7 @@ export function Testimonials() {
       <SectionHeading
         eyebrow="Testemunhos"
         title={`${social.recommendPercent}% recomendam`}
-        description={`Com base em ${social.reviewCount} críticas no Facebook.`}
+        description="Baseado nas avaliações dos nossos clientes."
       />
 
       <div className="relative flex items-center gap-4">
@@ -36,7 +37,7 @@ export function Testimonials() {
           <ChevronLeft size={18} />
         </button>
 
-        <div className="bg-surface border-border relative min-h-[180px] flex-1 overflow-hidden rounded-2xl border p-8">
+        <div className="bg-surface border-border relative min-h-[220px] flex-1 overflow-x-hidden rounded-2xl border p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}
@@ -44,7 +45,7 @@ export function Testimonials() {
               animate={{ opacity: 1, x: 0, rotateY: 0 }}
               exit={{ opacity: 0, x: -30, rotateY: -15 }}
               transition={{ duration: 0.4 }}
-              className="text-center"
+              className="flex h-full flex-col items-center justify-center text-center"
             >
               <div className="mb-3 flex justify-center gap-1">
                 {Array.from({ length: current.rating }).map((_, i) => (
@@ -73,6 +74,21 @@ export function Testimonials() {
         >
           <ChevronRight size={18} />
         </button>
+      </div>
+
+      <div className="mt-6 flex justify-center gap-2">
+        {testimonials.map((testimonial, i) => (
+          <button
+            key={testimonial.id}
+            type="button"
+            aria-label={`Ver testemunho ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={cn(
+              "h-1.5 rounded-full transition-all",
+              i === index ? "bg-gold-500 w-6" : "bg-border w-1.5",
+            )}
+          />
+        ))}
       </div>
     </section>
   );

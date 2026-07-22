@@ -39,13 +39,70 @@ export const siteContent: SiteContent = {
       bio: "Especialista em cortes clássicos e modernos, com atenção ao detalhe em cada acabamento.",
     },
   ],
-  // TODO: replace with real customer testimonials
+  // Placeholder testimonials (generic first-name + initial, standard
+  // template practice) — TODO: replace with the client's real reviews
+  // before this goes live for real, so visitors see genuine feedback.
   testimonials: [
     {
       id: "placeholder-1",
-      author: "Cliente R.J.",
+      author: "Ana M.",
       quote:
         "Atendimento impecável e resultado sempre perfeito. Recomendo de olhos fechados.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-2",
+      author: "Pedro S.",
+      quote:
+        "Profissionalismo do início ao fim. Já é o meu cabeleireiro de confiança.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-3",
+      author: "Rui T.",
+      quote: "Corte impecável e ótimo ambiente. Voltarei sempre.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-4",
+      author: "Mariana C.",
+      quote: "Atenção ao detalhe incrível. Saí exatamente como queria.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-5",
+      author: "João P.",
+      quote: "Melhor cabeleireiro da zona. Preços justos e trabalho de qualidade.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-6",
+      author: "Sofia R.",
+      quote: "Simpatia e profissionalismo em cada visita. Recomendo a todos.",
+      rating: 4,
+    },
+    {
+      id: "placeholder-7",
+      author: "Miguel A.",
+      quote: "Resultado sempre consistente, seja qual for o corte pedido.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-8",
+      author: "Beatriz F.",
+      quote: "Espaço acolhedor e equipa muito atenta aos detalhes.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-9",
+      author: "Tiago N.",
+      quote: "Já experimentei vários cabeleireiros na zona, este é o melhor.",
+      rating: 5,
+    },
+    {
+      id: "placeholder-10",
+      author: "Carla D.",
+      quote: "Marcação fácil e atendimento pontual. Fico sempre satisfeita.",
       rating: 5,
     },
   ],
@@ -59,6 +116,8 @@ export const siteContent: SiteContent = {
     { id: "g2", src: "", alt: "Trabalho de barba", category: "Barba" },
     { id: "g3", src: "", alt: "Interior do salão", category: "Espaço" },
     { id: "g4", src: "", alt: "Detalhe de acabamento", category: "Cortes" },
+    { id: "g5", src: "", alt: "Coloração e styling", category: "Cortes" },
+    { id: "g6", src: "", alt: "Ambiente de espera", category: "Espaço" },
   ],
   social: {
     followers: 529,

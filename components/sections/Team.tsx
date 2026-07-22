@@ -11,7 +11,7 @@ export function Team() {
     <section id="equipa" className="mx-auto max-w-6xl px-6 py-28">
       <SectionHeading eyebrow="Equipa" title="Quem cuida do seu corte" />
 
-      <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-8">
         {siteContent.team.map((member, index) => (
           <motion.div
             key={member.id}
@@ -19,6 +19,7 @@ export function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
+            className="w-full max-w-[280px]"
           >
             <FlipCard
               className="aspect-[3/4] w-full"
