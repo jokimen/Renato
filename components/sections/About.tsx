@@ -19,7 +19,7 @@ export function About() {
     <section id="sobre" ref={ref} className="relative overflow-hidden py-28">
       <motion.div style={{ y }} className="absolute inset-0 -z-10 opacity-40">
         <PlaceholderImage
-          alt="Interior da barbearia R.J.Cabeleireiros"
+          alt="Interior do salão R.J.Cabeleireiros"
           className="h-full w-full"
         />
       </motion.div>
@@ -28,7 +28,7 @@ export function About() {
       <div className="mx-auto max-w-4xl px-6">
         <SectionHeading
           eyebrow="Sobre nós"
-          title="Tradição de barbearia, olho de detalhe"
+          title="Tradição no cuidado do cabelo, olho de detalhe"
           description="Na Rua D. Pedro V, em Trofa, cuidamos de cada corte com a mesma atenção — do primeiro à última cliente."
         />
 

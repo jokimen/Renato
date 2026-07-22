@@ -48,7 +48,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="text-foreground/70 mt-6 max-w-md text-lg text-balance"
         >
-          Cortes de precisão e cuidado com a barba, num espaço pensado para o
+          Cortes de precisão e cuidado capilar, num espaço pensado para o
           detalhe. {siteContent.social.recommendPercent}% de recomendação por
           quem já passou por aqui.
         </motion.p>

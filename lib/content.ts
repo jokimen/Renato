@@ -5,7 +5,7 @@ import type { SiteContent } from "./types";
 // are placeholders until the client supplies real content.
 export const siteContent: SiteContent = {
   businessName: "R.J. Cabeleireiros",
-  tagline: "Barbearia de precisão em Trofa",
+  tagline: "Cabeleireiro de precisão em Trofa",
   address: "Rua D. Pedro V, Edifício Concorde, Loja 3, Trofa, Portugal",
   phone: "+351914346731",
   phoneDisplay: "914 346 731",
@@ -33,9 +33,9 @@ export const siteContent: SiteContent = {
   // TODO: replace with real team members provided by the client
   team: [
     {
-      id: "barbeiro-1",
-      name: "Barbeiro 1",
-      role: "Barbeiro principal",
+      id: "cabeleireiro-1",
+      name: "Cabeleireiro 1",
+      role: "Cabeleireiro principal",
       bio: "Especialista em cortes clássicos e modernos, com atenção ao detalhe em cada acabamento.",
     },
   ],
@@ -57,7 +57,7 @@ export const siteContent: SiteContent = {
       category: "Cortes",
     },
     { id: "g2", src: "", alt: "Trabalho de barba", category: "Barba" },
-    { id: "g3", src: "", alt: "Interior da barbearia", category: "Espaço" },
+    { id: "g3", src: "", alt: "Interior do salão", category: "Espaço" },
     { id: "g4", src: "", alt: "Detalhe de acabamento", category: "Cortes" },
   ],
   social: {

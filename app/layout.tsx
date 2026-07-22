@@ -21,9 +21,9 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: `${siteContent.businessName} | Barbearia em Trofa`,
+  title: `${siteContent.businessName} | Cabeleireiro em Trofa`,
   description:
-    "Barbearia de precisão em Trofa. Cortes de cabelo, barba e tratamentos com atenção ao detalhe.",
+    "Cabeleireiro de precisão em Trofa. Cortes de cabelo, barba e tratamentos com atenção ao detalhe.",
 };
 
 export default function RootLayout({
