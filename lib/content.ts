@@ -1,8 +1,9 @@
 import type { SiteContent } from "./types";
 
 // Real business data confirmed from the client's public Facebook page
-// (facebook.com/R.J.Cabeleireiro). Team, testimonials and gallery photos
-// are placeholders until the client supplies real content.
+// (facebook.com/R.J.Cabeleireiro) and Google Maps listing (4.8/5, 51
+// críticas). Team and gallery photos are placeholders until the client
+// supplies real content; testimonials are real Google reviews.
 export const siteContent: SiteContent = {
   businessName: "R.J. Cabeleireiros",
   tagline: "Cabeleireiro de precisão em Trofa",
@@ -39,71 +40,29 @@ export const siteContent: SiteContent = {
       bio: "Especialista em cortes clássicos e modernos, com atenção ao detalhe em cada acabamento.",
     },
   ],
-  // Placeholder testimonials (generic first-name + initial, standard
-  // template practice) — TODO: replace with the client's real reviews
-  // before this goes live for real, so visitors see genuine feedback.
+  // Real Google reviews (confirmed on the business's Google Maps listing,
+  // 4.8/5 from 51 críticas total). Only 3 were reliably extractable via
+  // automated tools — TODO: add more of the real 51 reviews here if the
+  // client wants a fuller carousel (pick from google.com/maps directly).
   testimonials: [
     {
-      id: "placeholder-1",
-      author: "Ana M.",
+      id: "google-paulo-jorge",
+      author: "Paulo Jorge",
       quote:
-        "Atendimento impecável e resultado sempre perfeito. Recomendo de olhos fechados.",
+        "Encontrei através do Maps e tive alguém disponível do outro lado. De fácil acesso e fácil de encontrar. Marquei para as 8h da manhã e quando cheguei já estava à minha espera.",
       rating: 5,
     },
     {
-      id: "placeholder-2",
-      author: "Pedro S.",
+      id: "google-nuno-oliveira",
+      author: "Nuno Oliveira",
+      quote: "Bom serviço, boa conversa! Preço qualidade muito bem adequado!",
+      rating: 5,
+    },
+    {
+      id: "google-cesar-mesquita",
+      author: "Cesar Mesquita",
       quote:
-        "Profissionalismo do início ao fim. Já é o meu cabeleireiro de confiança.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-3",
-      author: "Rui T.",
-      quote: "Corte impecável e ótimo ambiente. Voltarei sempre.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-4",
-      author: "Mariana C.",
-      quote: "Atenção ao detalhe incrível. Saí exatamente como queria.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-5",
-      author: "João P.",
-      quote:
-        "Melhor cabeleireiro da zona. Preços justos e trabalho de qualidade.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-6",
-      author: "Sofia R.",
-      quote: "Simpatia e profissionalismo em cada visita. Recomendo a todos.",
-      rating: 4,
-    },
-    {
-      id: "placeholder-7",
-      author: "Miguel A.",
-      quote: "Resultado sempre consistente, seja qual for o corte pedido.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-8",
-      author: "Beatriz F.",
-      quote: "Espaço acolhedor e equipa muito atenta aos detalhes.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-9",
-      author: "Tiago N.",
-      quote: "Já experimentei vários cabeleireiros na zona, este é o melhor.",
-      rating: 5,
-    },
-    {
-      id: "placeholder-10",
-      author: "Carla D.",
-      quote: "Marcação fácil e atendimento pontual. Fico sempre satisfeita.",
+        "Salão muito limpo, muita higiene. Parabéns pela maneira como recebe os clientes.",
       rating: 5,
     },
   ],
@@ -123,7 +82,8 @@ export const siteContent: SiteContent = {
   social: {
     followers: 529,
     recommendPercent: 100,
-    reviewCount: 5,
+    googleReviewCount: 51,
+    googleRating: 4.8,
     yearsExperience: 25,
   },
 };

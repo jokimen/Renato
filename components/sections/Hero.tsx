@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Scissors } from "lucide-react";
 import { siteContent } from "@/lib/content";
+import { BarberChairIcon, ClipperIcon } from "@/components/ui/BarberIcons";
 
 export function Hero() {
   return (
@@ -12,20 +13,49 @@ export function Hero() {
     >
       <motion.div
         aria-hidden
-        initial={{ opacity: 0, scale: 0.85, rotate: -20 }}
-        animate={{ opacity: 0.9, scale: 1, rotate: -12 }}
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="pointer-events-none absolute top-1/2 -right-16 hidden -translate-y-1/2 lg:block"
+        className="pointer-events-none absolute top-1/2 -right-6 hidden h-[440px] w-[440px] -translate-y-1/2 lg:block"
       >
         <motion.div
+          initial={{ rotate: -12 }}
           animate={{ rotate: [-12, -6, -12], y: [0, -14, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 right-0 -translate-y-1/2"
         >
           <Scissors
-            size={420}
+            size={360}
             strokeWidth={0.6}
             className="text-gold-500 drop-shadow-[0_0_60px_rgba(201,163,92,0.35)]"
           />
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 12, 0] }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.4,
+          }}
+          className="absolute bottom-4 left-0"
+        >
+          <BarberChairIcon size={130} className="text-gold-500/55" />
+        </motion.div>
+
+        <motion.div
+          initial={{ rotate: 18 }}
+          animate={{ rotate: [18, 12, 18], y: [0, -10, 0] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.8,
+          }}
+          className="absolute top-6 left-10"
+        >
+          <ClipperIcon size={90} className="text-gold-500/50" />
         </motion.div>
       </motion.div>
 
@@ -34,13 +64,14 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.18 }}
         transition={{ duration: 1 }}
-        className="pointer-events-none absolute inset-0 flex items-center justify-center lg:hidden"
+        className="pointer-events-none absolute inset-0 flex items-center justify-center gap-6 lg:hidden"
       >
         <Scissors
-          size={260}
+          size={220}
           strokeWidth={0.6}
           className="text-gold-500 -rotate-[15deg]"
         />
+        <BarberChairIcon size={90} className="text-gold-500" />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,163,92,0.12),_transparent_60%)]" />

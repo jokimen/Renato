@@ -31,7 +31,8 @@ export interface GalleryImage {
 export interface SocialStats {
   followers: number;
   recommendPercent: number;
-  reviewCount: number;
+  googleReviewCount: number;
+  googleRating: number;
   yearsExperience: number;
 }
 

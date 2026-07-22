@@ -49,9 +49,9 @@ export function About() {
             label="Recomendam"
           />
           <AnimatedCounter
-            value={siteContent.social.reviewCount}
-            label="Críticas"
-            suffix=""
+            value={siteContent.social.googleReviewCount}
+            suffix="+"
+            label="Críticas no Google"
           />
         </div>
       </div>
