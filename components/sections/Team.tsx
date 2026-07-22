@@ -25,7 +25,7 @@ export function Team() {
               className="aspect-[3/4] w-full"
               front={
                 <div className="border-border relative h-full w-full overflow-hidden rounded-2xl border">
-                  <PlaceholderImage alt={member.name} />
+                  <PlaceholderImage src={member.photo} alt={member.name} />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                     <p className="font-display text-lg text-white">
                       {member.name}
